@@ -110,20 +110,6 @@ ACPM automates all of it in seconds.
 
 ---
 
-# 🛣️ Roadmap
-
-- [ ] Library integration system
-- [ ] SDL3 templates
-- [ ] Vulkan starter projects
-- [ ] GLFW support
-- [ ] ImGui integration
-- [ ] Config system
-- [ ] Theme customization
-- [ ] Linux support
-- [ ] Plugin system
-
----
-
 # 🤝 Contributing
 
 Pull requests, ideas, and improvements are welcome.
