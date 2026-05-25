@@ -1,27 +1,35 @@
-ACPM
+# ACPM
 
-Advanced C++ Project Manager
-A lightweight terminal-based C++ project generator built for modern C++ development.
+> Advanced C++ Project Manager  
+> A lightweight terminal-based C++ project generator built for modern C++ development.
 
-✨ Features
-⚡ Fast interactive terminal UI
-📁 Automatic project structure generation
-🛠️ Optional CMakeLists.txt creation
-🚀 Multiple C++ standard support
-C++23
-C++20
-C++17
-C++14
-C++11
-🎨 ANSI colored interface
-⌨️ Arrow-key navigation system
-📦 Generates:
-src/
-include/
-main.cpp
-pch.hpp
-CMakeLists.txt
-📸 Preview
+---
+
+# ✨ Features
+
+- ⚡ Fast interactive terminal UI
+- 📁 Automatic project structure generation
+- 🛠️ Optional `CMakeLists.txt` creation
+- 🚀 Multiple C++ standard support:
+  - C++23
+  - C++20
+  - C++17
+  - C++14
+  - C++11
+- 🎨 ANSI colored interface
+- ⌨️ Arrow-key navigation system
+- 📦 Generates:
+  - `src/`
+  - `include/`
+  - `main.cpp`
+  - `pch.hpp`
+  - `CMakeLists.txt`
+
+---
+
+# 📸 Preview
+
+```txt
 -=========== ACPM (Project Manager) ===========-
 
    > Create Project
@@ -31,69 +39,112 @@ CMakeLists.txt
 
 ------------------------------------------------
 Use Arrow Keys To Navigate | ENTER -> Select
-🚀 Getting Started
-Requirements
-Windows
-MinGW / GCC
-CMake
-C++17 or newer compiler
-🔧 Build
-Using MinGW
+```
+
+---
+
+# 🚀 Getting Started
+
+## Requirements
+
+- Windows
+- MinGW / GCC
+- CMake
+- C++17 or newer compiler
+
+---
+
+# 🔧 Build
+
+## Using MinGW
+
+```bash
 cmake -B build -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release
 cmake --build build
-▶️ Run
+```
+
+---
+
+# ▶️ Run
+
+```bash
 ./build/ACPM.exe
-📂 Generated Project Structure
+```
+
+---
+
+# 📂 Generated Project Structure
+
+```txt
 MyProject/
 ├── src/
 │   └── main.cpp
 ├── include/
 │   └── pch.hpp
 └── CMakeLists.txt
-🧠 Why ACPM?
+```
+
+---
+
+# 🧠 Why ACPM?
 
 Creating C++ projects manually gets repetitive:
 
-Creating folders
-Writing boilerplate
-Configuring CMake
-Setting standards
-Organizing structure
+- Creating folders
+- Writing boilerplate
+- Configuring CMake
+- Setting standards
+- Organizing structure
 
 ACPM automates all of it in seconds.
 
-⚙️ Technologies
-Modern C++
-STL
-<filesystem>
-ANSI Escape Codes
-CMake
-MinGW
-🛣️ Roadmap
- Library integration system
- SDL3 templates
- Vulkan starter projects
- GLFW support
- ImGui integration
- Config system
- Theme customization
- Linux support
- Plugin system
-🤝 Contributing
+---
+
+# ⚙️ Technologies
+
+- Modern C++
+- STL
+- ANSI Escape Codes
+- CMake
+- MinGW
+
+---
+
+# 🛣️ Roadmap
+
+- [ ] Library integration system
+- [ ] SDL3 templates
+- [ ] Vulkan starter projects
+- [ ] GLFW support
+- [ ] ImGui integration
+- [ ] Config system
+- [ ] Theme customization
+- [ ] Linux support
+- [ ] Plugin system
+
+---
+
+# 🤝 Contributing
 
 Pull requests, ideas, and improvements are welcome.
 
 If you find bugs or have suggestions, feel free to open an issue.
 
-📜 License
+---
+
+# 📜 License
 
 MIT License
 
-👨‍💻 Author
+---
 
-Hadi Vafaee
-GitHub: Hypex-g17 GitHub Profile
+# 👨‍💻 Author
 
-⭐ Support
+**Hadi Vafaee**  
+GitHub: https://github.com/Hypex-g17
+
+---
+
+# ⭐ Support
 
 If you like this project, consider giving it a star on GitHub.
