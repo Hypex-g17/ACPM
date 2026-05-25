@@ -1,0 +1,3 @@
+C:\msys64\ucrt64\bin\cmake.exe -E rm -f CMakeFiles\ACPM.dir/objects.a
+C:\msys64\ucrt64\bin\ar.exe qc CMakeFiles\ACPM.dir/objects.a @CMakeFiles\ACPM.dir\objects1.rsp
+C:\msys64\ucrt64\bin\g++.exe  -static-libgcc -static-libstdc++ -g  -static -Wl,--whole-archive CMakeFiles\ACPM.dir/objects.a -Wl,--no-whole-archive -o bin\ACPM.exe -Wl,--out-implib,libACPM.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\ACPM.dir\linkLibs.rsp

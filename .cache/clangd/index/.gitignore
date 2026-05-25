@@ -1,0 +1,10 @@
+build/
+.cache/
+.vscode/
+*.exe
+*.o
+*.obj
+*.dll
+*.a
+*.so
+compile_commands.json

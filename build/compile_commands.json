@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Projects/ACPM/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/ACPM.dir/includes_CXX.rsp  -static-libgcc -static-libstdc++ -g -std=c++23 -Wall -Wextra -Wpedantic -Werror -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wformat=2 -o CMakeFiles\\ACPM.dir\\src\\main.cpp.obj -c C:\\Projects\\ACPM\\src\\main.cpp",
+  "file": "C:/Projects/ACPM/src/main.cpp",
+  "output": "CMakeFiles/ACPM.dir/src/main.cpp.obj"
+}
+]
