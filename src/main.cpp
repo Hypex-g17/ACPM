@@ -176,7 +176,7 @@ void CreateProject() {
 
   if (mainFile.is_open()) {
 
-    ifstream templateFile("C:/Projects/ACPM/assets/MainCppCode.txt");
+    ifstream templateFile("assets/MainCppCode.txt");
 
     if (templateFile.is_open()) {
       mainFile << templateFile.rdbuf();
@@ -217,7 +217,7 @@ void CreateProject() {
     if (cmakeFile.is_open()) {
 
       ifstream cmakeTemplate(
-          "C:/Projects/ACPM/assets/MainCmakeCode.txt");
+          "assets/MainCmakeCode.txt");
 
       if (cmakeTemplate.is_open()) {
 
