@@ -15,6 +15,8 @@ namespace fs = std::filesystem;
 #define KEY_ENTER 13
 #define KEY_ESCAPE 27
 
+bool running = true;
+
 // Fast ANSI Clear Screen
 void ClearScreen() { system("cls"); }
 
@@ -176,7 +178,7 @@ void CreateProject() {
 
   if (mainFile.is_open()) {
 
-    ifstream templateFile("assets/MainCppCode.txt");
+    ifstream templateFile("assets/MainCppCode.cpp");
 
     if (templateFile.is_open()) {
       mainFile << templateFile.rdbuf();
@@ -260,8 +262,8 @@ void CreateProject() {
   cout << "\n\033[1m\033[32m[Success]\033[0m Project '"
        << projectName
        << "' is ready!\n";
-
-  cout << "Press any key to continue...";
+      running=false;
+  cout << "Press any key to exit...";
   _getch();
 }
 
@@ -287,7 +289,6 @@ int main() {
 
   size_t selected = 0;
 
-  bool running = true;
 
   while (running) {
 
