@@ -136,10 +136,7 @@ void CreateProject() {
   string cmakeTitle =
       "Project: " + projectName + "\nDo you want to create CMakeLists.txt?";
 
-  vector<string> cmakeOptions = {
-      "Yes (Recommended)",
-      "No"
-  };
+  vector<string> cmakeOptions = {"Yes (Recommended)", "No"};
 
   bool createCMake = (selectionMenu(cmakeTitle, cmakeOptions) == 0);
 
@@ -147,13 +144,8 @@ void CreateProject() {
   string cppTitle =
       "Project: " + projectName + "\nSelect C++ standard version:";
 
-  vector<string> cppVersions = {
-      "c++23 (Recommended)",
-      "c++20",
-      "c++17",
-      "c++14",
-      "c++11"
-  };
+  vector<string> cppVersions = {"c++23 (Recommended)", "c++20", "c++17",
+                                "c++14", "c++11"};
 
   int cppSelIndex = selectionMenu(cppTitle, cppVersions);
 
@@ -186,12 +178,11 @@ void CreateProject() {
     }
 
     else {
-      mainFile
-          << "#include <iostream>\n\n"
-          << "int main() {\n"
-          << "    std::cout << \"Hello World!\" << std::endl;\n"
-          << "    return 0;\n"
-          << "}\n";
+      mainFile << "#include <iostream>\n\n"
+               << "int main() {\n"
+               << "    std::cout << \"Hello World!\" << std::endl;\n"
+               << "    return 0;\n"
+               << "}\n";
     }
 
     mainFile.close();
@@ -218,39 +209,34 @@ void CreateProject() {
 
     if (cmakeFile.is_open()) {
 
-      ifstream cmakeTemplate(
-          "assets/MainCmakeCode.txt");
+      ifstream cmakeTemplate("assets/MainCmakeCode.txt");
 
       if (cmakeTemplate.is_open()) {
+        string content((istreambuf_iterator<char>(cmakeTemplate)),
+                       istreambuf_iterator<char>());
 
-        string content(
-            (istreambuf_iterator<char>(cmakeTemplate)),
-            istreambuf_iterator<char>());
+        size_t startWord = content.find("project");
 
-        size_t pos = content.find("project(");
+        if (startWord != string::npos) {
+          size_t openParen = content.find("(", startWord);
+          size_t closeParen = content.find(")", openParen);
 
-        if (pos != string::npos) {
-
-          size_t endPos = content.find(")", pos);
-
-          content.replace(
-              pos,
-              endPos - pos + 1,
-              "project(" + projectName + ")");
+          if (openParen != string::npos && closeParen != string::npos) {
+            content.replace(startWord, closeParen - startWord + 1,
+                            "project(" + projectName + ")");
+          }
         }
 
         cmakeFile << content;
-
         cmakeTemplate.close();
       }
 
       else {
 
-        cmakeFile
-            << "cmake_minimum_required(VERSION 3.10)\n"
-            << "project(" << projectName << ")\n"
-            << "set(CMAKE_CXX_STANDARD " << cppStdNumber << ")\n"
-            << "add_executable(${PROJECT_NAME} src/main.cpp)\n";
+        cmakeFile << "cmake_minimum_required(VERSION 3.10)\n"
+                  << "project(" << projectName << ")\n"
+                  << "set(CMAKE_CXX_STANDARD " << cppStdNumber << ")\n"
+                  << "add_executable(${PROJECT_NAME} src/main.cpp)\n";
       }
 
       cmakeFile.close();
@@ -259,10 +245,9 @@ void CreateProject() {
     }
   }
 
-  cout << "\n\033[1m\033[32m[Success]\033[0m Project '"
-       << projectName
+  cout << "\n\033[1m\033[32m[Success]\033[0m Project '" << projectName
        << "' is ready!\n";
-      running=false;
+  running = false;
   cout << "Press any key to exit...";
   _getch();
 }
@@ -280,15 +265,9 @@ void ShowSettings() {
 
 int main() {
 
-  vector<string> options = {
-      "Create Project",
-      "Settings",
-      "About",
-      "Exit"
-  };
+  vector<string> options = {"Create Project", "Settings", "About", "Exit"};
 
   size_t selected = 0;
-
 
   while (running) {
 
@@ -301,9 +280,7 @@ int main() {
     switch (key) {
 
     case KEY_UP:
-      selected = (selected == 0)
-                     ? options.size() - 1
-                     : selected - 1;
+      selected = (selected == 0) ? options.size() - 1 : selected - 1;
       break;
 
     case KEY_DOWN:
